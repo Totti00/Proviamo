@@ -1,4 +1,4 @@
-# Proviamo - Smart Locker Hub
+# Smart Locker Hub
 
 Applicazione web per la gestione di un deposito bagagli con 25 armadietti, con:
 
