@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Locker Hub</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <header>
+        <h1>Smart Locker Hub</h1>
+        <p>Gestione intuitiva e sicura di 25 armadietti: prenota, paga, accedi e monitora.</p>
+      </header>
+
+      <section class="panel" id="auth-panel">
+        <h2>Accesso sicuro (password + OTP)</h2>
+        <form id="login-form">
+          <label>Username <input name="username" required placeholder="mario o admin" /></label>
+          <label>Password <input name="password" type="password" required /></label>
+          <label>OTP <input name="otp" required placeholder="6 cifre" /></label>
+          <button type="submit">Accedi</button>
+        </form>
+        <p class="hint">Demo utente: mario / User#2026! / 173829 — Demo admin: admin / Admin#2026! / 998811</p>
+      </section>
+
+      <section class="panel hidden" id="user-panel">
+        <h2>Livello Utente</h2>
+        <form id="booking-form">
+          <label>Durata (minuti) <input name="durationMinutes" type="number" min="30" max="1440" value="120" /></label>
+          <button type="submit">Prenota armadietto</button>
+        </form>
+
+        <h3>Prenotazioni</h3>
+        <ul id="bookings"></ul>
+      </section>
+
+      <section class="panel hidden" id="operations-panel">
+        <h2>Livello Operativo</h2>
+        <p id="locker-summary"></p>
+        <div id="lockers" class="locker-grid"></div>
+      </section>
+
+      <section class="panel hidden" id="coordination-panel">
+        <h2>Terzo Livello di Coordinamento</h2>
+        <pre id="dashboard"></pre>
+      </section>
+
+      <section class="panel">
+        <h2>Messaggi sistema</h2>
+        <p id="feedback">Attendi accesso...</p>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
